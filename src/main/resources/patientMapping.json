@@ -1,0 +1,42 @@
+{
+
+  "root" : {
+      "tagName" : "patients",
+      "structure" : "array",
+      "collectionType" : "patient"
+  },
+
+  "objects" : {
+    "patient" : {
+      "fields" : [
+        {
+          "sourceName" : "id",
+          "sourceType" : "java.lang.Integer",
+          "targetName" : "patientId",
+          "targetType" : "java.lang.Integer"
+        },
+        {
+          "sourceName" : "dateOfBirth",
+          "sourceType" : "java.lang.String",
+          "targetName" : "age",
+          "targetType" : "java.lang.Integer",
+          "translationMethod" : "dateToAge"
+        },
+        {
+          "sourceName" : "gender",
+          "sourceType" : "java.lang.String",
+          "targetName" : "sex",
+          "targetType" : "java.lang.String",
+          "translationMethod" : "charToGenderWord"
+        },
+        {
+          "sourceName" : "state",
+          "sourceType" : "java.lang.String",
+          "targetName" : "state",
+          "targetType" : "java.lang.String",
+          "translationMethod" : "fullStateToAbbreviation"
+        }
+      ]
+    }
+  }
+}
